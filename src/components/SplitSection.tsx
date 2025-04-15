@@ -12,6 +12,7 @@ import {
 	ResizablePanel,
 	ResizablePanelGroup,
 } from "@/components/ui/resizable"
+import { AdvancedColorPicker } from "./ui/advanced-color-picker"
 
 type Direction = "horizontal" | "vertical"
 
@@ -41,12 +42,10 @@ const SplitSection = ({
 							className="w-full h-full rounded-md"
 							style={{ background: color }}
 						></div>
-						<input
-							type="color"
-							className="absolute top-5 right-5"
-							defaultValue={color}
-							onChange={(e) => setColor(e.target.value)}
-						/>
+						
+						<div className="absolute top-5 right-5">
+							<AdvancedColorPicker color={color} onChange={setColor} />
+						</div>
 					</div>
 				)}
 			</ContextMenuTrigger>
