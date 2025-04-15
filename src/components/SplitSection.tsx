@@ -12,7 +12,7 @@ import {
 	ResizablePanel,
 	ResizablePanelGroup,
 } from "@/components/ui/resizable"
-import { AdvancedColorPicker } from "./ui/advanced-color-picker"
+import ColorPicker from "./ui/color-picker"
 
 type Direction = "horizontal" | "vertical"
 
@@ -44,7 +44,8 @@ const SplitSection = ({
 						></div>
 						
 						<div className="absolute top-5 right-5">
-							<AdvancedColorPicker color={color} onChange={setColor} />
+							<ColorPicker  color={color} onChange={setColor}  />
+							{/* <HexColorPicker color={color} onChange={setColor} /> */}
 						</div>
 					</div>
 				)}
