@@ -14,13 +14,15 @@ type Props = {
 const ColorPicker = ({ color, onChange }: Props ) => {
   return (
     <Popover>
-  <PopoverTrigger asChild>
-    <Button variant="outline" className='p-2'>
-        <div className='w-5 h-5 shadow-md border rounded-sm' style={{ backgroundColor: color }}></div>
-    </Button>
-  </PopoverTrigger>
-  <PopoverContent><HexColorPicker color={color} onChange={onChange} /></PopoverContent>
-</Popover>
+        <PopoverTrigger asChild>
+            <Button variant="outline" className='p-2'>
+                <div className='w-5 h-5 shadow-md border rounded-sm' style={{ backgroundColor: color }}></div>
+            </Button>
+        </PopoverTrigger>
+        <PopoverContent side="left" className="w-max">
+            <HexColorPicker className="" color={color} onChange={onChange} />
+        </PopoverContent>
+    </Popover>
   )
 }
 

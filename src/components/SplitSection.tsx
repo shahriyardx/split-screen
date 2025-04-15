@@ -45,7 +45,6 @@ const SplitSection = ({
 						
 						<div className="absolute top-5 right-5">
 							<ColorPicker  color={color} onChange={setColor}  />
-							{/* <HexColorPicker color={color} onChange={setColor} /> */}
 						</div>
 					</div>
 				)}
